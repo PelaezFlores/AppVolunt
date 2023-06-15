@@ -11,136 +11,185 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="27dp"
         android:text="@string/title_registroOrganizacion"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="27dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
         android:text="@string/text_nombreOrganizacion"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="77dp" />
+        app:layout_constraintStart_toStartOf="@+id/editTextText"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="42dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="37dp"
         android:ems="10"
         android:inputType="text"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="110dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:layout_marginBottom="114dp"
         android:text="@string/text_Propetario"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="170dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextText4"
+        app:layout_constraintStart_toStartOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <EditText
         android:id="@+id/editTextText2"
-        android:layout_width="143dp"
+        android:layout_width="0dp"
         android:layout_height="41dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:inputType="text"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="203dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="14dp"
         android:text="@string/text_direccion"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="170dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextText3"
+        app:layout_constraintStart_toStartOf="@+id/editTextText3" />
 
     <EditText
         android:id="@+id/editTextText3"
-        android:layout_width="180dp"
+        android:layout_width="0dp"
         android:layout_height="45dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="96dp"
         android:ems="10"
         android:inputType="text"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="203dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextText2"
+        app:layout_constraintTop_toTopOf="@+id/editTextText" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="12dp"
         android:text="@string/text_Ruc"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="272dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextText4"
+        app:layout_constraintStart_toStartOf="@+id/editTextText4" />
 
     <EditText
         android:id="@+id/editTextText4"
-        android:layout_width="159dp"
+        android:layout_width="0dp"
         android:layout_height="41dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="226dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="226dp"
         android:ems="10"
         android:inputType="text"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="303dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText7"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="336dp"
         android:text="@string/text_Correo"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="376dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextText6"
-        android:layout_width="181dp"
-        android:layout_height="41dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
         android:ems="10"
         android:inputType="text"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="303dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextText4"
+        app:layout_constraintTop_toTopOf="@+id/editTextText4" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="12dp"
         android:text="@string/text_Celular"
-        tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="272dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextText6"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText"
+        app:layout_constraintStart_toStartOf="@+id/editTextText3" />
 
     <EditText
         android:id="@+id/editTextText7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="text"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="525dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="24dp"
         android:text="@string/text_Contraseña"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="488dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText8" />
 
     <EditText
         android:id="@+id/editTextText8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="text"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="419dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="134dp"
         android:text="@string/btn_registrarOrganizacion"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="597dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

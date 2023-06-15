@@ -25,7 +25,7 @@ class RegistroActivity : AppCompatActivity() {
                 hashMapOf("nombre" to textNombres.text.toString(),
                     "DNI" to textdni.text.toString(),
                     "Password" to textPassword.text.toString(),
-                    "Tipo" to "cliente")
+                    "Tipo" to "Voluntario")
             )
 
             FirebaseAuth.getInstance()

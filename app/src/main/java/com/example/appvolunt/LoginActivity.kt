@@ -6,38 +6,91 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-        val txtEmail: EditText = findViewById(R.id.txtEmail)
-        val txtPassword:EditText= findViewById(R.id.txtPassword)
-        val btnLogin: Button = findViewById(R.id.btnLogin)
-        val tvbtnRegistro: TextView = findViewById(R.id.textView4)
-        val db = FirebaseAuth.getInstance()
-
-        tvbtnRegistro.setOnClickListener{
-            // Aquí se coloca la lógica para abrir la actividad de registro o realizar otra acción relacionada
-            startActivity(Intent(this, RegistroActivity::class.java))
+        try {
+            this.supportActionBar!!.hide()
+        } // catch block to handle NullPointerException
+        catch (e: NullPointerException) {
         }
+
+        setContentView(R.layout.activity_login)
+
+        val btnLogin: Button = findViewById(R.id.btnLogin)
+
+        val etEmail: EditText = findViewById(R.id.txtEmail)
+        val etContraseña: EditText = findViewById(R.id.txtPassword)
+
+        val Registro: TextView = findViewById(R.id.txtRegistrar)
+        val db = FirebaseFirestore.getInstance()
+
+        val email: String = "admin@peru.com"
+
+        Registro.setOnClickListener{
+            this.goRegistro()
+        }
+
+
+
 
         btnLogin.setOnClickListener{
-            val correo = txtEmail.text.toString()
-            val clave = txtPassword.text.toString()
+            if(etEmail.text.isNotEmpty() && etContraseña.text.isNotEmpty()){
+                FirebaseAuth.getInstance()
+                    .signInWithEmailAndPassword(etEmail.text.toString(), etContraseña.text.toString()).addOnCompleteListener{
+                        if (it.isSuccessful){
+                            db.collection("users").document(etEmail.text.toString()).get().addOnSuccessListener{
+                                val validacion = it.get("Tipo") as String?
+                                if (validacion == "Voluntario"){
+                                    goMain()
+                                    etEmail.text.clear()
+                                    etContraseña.text.clear()
 
-            db.signInWithEmailAndPassword(correo,clave )
-                .addOnCompleteListener(this){task ->
-                    if(task.isSuccessful) {
-                        Toast.makeText(this, "inicio satisfactorio", Toast.LENGTH_LONG).show()
-                        startActivity(Intent(this, MainActivity ::class.java))
-                    }else{
-                            Toast.makeText(this,"correo y / o clave incorrecta",Toast.LENGTH_LONG).show()
+                                }
+                                if (validacion == "admin"){
+                                    goAdmin()
+                                    etEmail.text.clear()
+                                    etContraseña.text.clear()
+                                }
+                            }
+                        }else{
+                            showAlert()
                         }
                     }
-                }
+            }
         }
+
     }
+
+
+    private fun showAlert(){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Error")
+        builder.setMessage("Se ha producido un error autenticando al usuario")
+        builder.setPositiveButton("Aceptar", null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun goMain(){
+        val intent: Intent = Intent(this, PrincipalActivity::class.java)
+        startActivity(intent)
+
+    }
+
+    private fun goAdmin(){
+        val intent: Intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+
+    }
+
+    private fun goRegistro(){
+        val intent: Intent = Intent(this, RegistroActivity::class.java)
+        startActivity(intent)
+
+    }
+}

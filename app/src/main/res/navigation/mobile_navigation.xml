@@ -2,24 +2,31 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
+    android:id="@+id/nav_Registro"
+    app:startDestination="@id/nav_Registro">
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.appvolunt.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/nav_Registro"
+        android:name="com.example.appvolunt.ui.fragments.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" />
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.appvolunt.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_Proyectos"
+        android:name="com.example.appvolunt.ui.fragments.ProyectosFragment"
+        android:label="fragment_proyectos"
+        tools:layout="@layout/fragment_proyectos" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.appvolunt.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_Comunidad"
+        android:name="com.example.appvolunt.ui.fragments.ComunidadFragment"
+        android:label="fragment_comunidad"
+        tools:layout="@layout/fragment_comunidad" />
+    <fragment
+        android:id="@+id/nav_Estadisticas"
+        android:name="com.example.appvolunt.ui.fragments.EstadisticasFragment"
+        android:label="fragment_estadisticas"
+        tools:layout="@layout/fragment_estadisticas" />
+    <fragment
+        android:id="@+id/nav_Filtrado"
+        android:name="com.example.appvolunt.ui.fragments.FiltradoFragment"
+        android:label="fragment_filtrado"
+        tools:layout="@layout/fragment_filtrado" />
 </navigation>
