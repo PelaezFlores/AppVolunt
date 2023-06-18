@@ -13,8 +13,13 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_proyectos" />
         <item
-            android:id="@+id/nav_Filtrado"
+            android:id="@+id/nav_Comunidad"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_filtrado" />
+        <item
+            android:id="@+id/nav_Estadisticas"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_filtrado" />
+
     </group>
 </menu>

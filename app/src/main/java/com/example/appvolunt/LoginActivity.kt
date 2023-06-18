@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         val Registro: TextView = findViewById(R.id.txtRegistrar)
         val db = FirebaseFirestore.getInstance()
 
-        val email: String = "admin@peru.com"
+        val email: String = "admin@esan.pe"
 
         Registro.setOnClickListener{
             this.goRegistro()
@@ -51,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
                                     etContraseña.text.clear()
 
                                 }
-                                if (validacion == "admin"){
+                                if (validacion == "organización"){
                                     goAdmin()
                                     etEmail.text.clear()
                                     etContraseña.text.clear()
@@ -77,13 +77,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goMain(){
-        val intent: Intent = Intent(this, PrincipalActivity::class.java)
+        val intent: Intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
 
     }
 
     private fun goAdmin(){
-        val intent: Intent = Intent(this, MainActivity::class.java)
+        val intent: Intent = Intent(this, PrincipalActivity::class.java)
         startActivity(intent)
 
     }
