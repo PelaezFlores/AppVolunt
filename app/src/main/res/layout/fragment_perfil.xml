@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PERFIL DE USUARIO"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/textViewTipoDocumento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIPO DE DOCUMENTO"
+        android:layout_below="@id/textViewTitulo"
+        android:layout_margin="16dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerTipoDocumento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTipoDocumento"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textViewNroDocumento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nro. DOCUMENTO"
+        android:layout_below="@id/spinnerTipoDocumento"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextDNI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nro. Documento"
+        android:inputType="number"
+        android:layout_below="@id/textViewNroDocumento"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOMBRE"
+        android:layout_below="@id/editTextDNI"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:layout_below="@id/textViewNombre"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIPO"
+        android:layout_below="@id/editTextNombre"
+        android:layout_margin="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTipo"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewCelular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CELULAR"
+        android:layout_below="@id/spinnerTipo"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextCelular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Celular"
+        android:inputType="phone"
+        android:layout_below="@id/textViewCelular"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DIRECCIÓN"
+        android:layout_below="@id/editTextCelular"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dirección"
+        android:inputType="textPostalAddress"
+        android:layout_below="@id/textViewDireccion"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewAreaInteres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ÁREA DE INTERÉS"
+        android:layout_below="@id/editTextDireccion"
+        android:layout_margin="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerAreaInteres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAreaInteres"
+        android:layout_margin="16dp"/>
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerAreaInteres"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="16dp"
+                android:text="GUARDAR" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
