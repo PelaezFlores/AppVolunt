@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.example.appvolunt.ui.fragments.RegistroOrganizacionFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -77,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goMain(){
-        val intent: Intent = Intent(this, MainActivity::class.java)
+        val intent: Intent = Intent(this, RegistroOrganizacionFragment::class.java)
         startActivity(intent)
 
     }
