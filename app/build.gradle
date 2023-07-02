@@ -8,6 +8,10 @@ android {
     namespace 'com.example.appvolunt'
     compileSdk 33
 
+    buildFeatures {
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "com.example.appvolunt"
         minSdk 28

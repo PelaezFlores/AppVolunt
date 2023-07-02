@@ -38,4 +38,20 @@
     <string name="text_Correo">Correo</string>
     <string name="text_Contraseña">Contraseña</string>
     <string name="btn_registrarOrganizacion">Registrar</string>
+
+    <string name="nombre_proyecto">Nombre del Proyecto</string>
+    <string name="descripcion_proyecto">Descripción del Proyecto</string>
+    <string name="habilidades_requeridas">Habilidades Requeridas</string>
+    <string name="ubicacion">Ubicación</string>
+    <string name="fecha_hora">Fecha y Hora</string>
+    <string name="cantidad_voluntarios_requeridos">Cantidad de Voluntarios Requeridos</string>
+    <string name="boton_publicar">Publicar</string>
+    <string name="crear_proyecto_titulo">Crear Nuevo Proyecto de Voluntariado</string>
+
+    <!-- Agrega aquí los estados del proyecto en el archivo de strings -->
+    <string-array name="estados_proyecto">
+        <item>En Planificación</item>
+        <item>En Progreso</item>
+        <item>Completado</item>
+    </string-array>
 </resources>

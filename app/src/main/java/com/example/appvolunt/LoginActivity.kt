@@ -40,11 +40,13 @@ class LoginActivity : AppCompatActivity() {
 
 
         btnLogin.setOnClickListener{
+
             if(etEmail.text.isNotEmpty() && etContraseña.text.isNotEmpty()){
                 FirebaseAuth.getInstance()
                     .signInWithEmailAndPassword(etEmail.text.toString(), etContraseña.text.toString()).addOnCompleteListener{
                         if (it.isSuccessful){
                             db.collection("users").document(etEmail.text.toString()).get().addOnSuccessListener{
+                                /*
                                 val validacion = it.get("Tipo") as String?
                                 if (validacion == "Voluntario"){
                                     goMain()
@@ -57,12 +59,16 @@ class LoginActivity : AppCompatActivity() {
                                     etEmail.text.clear()
                                     etContraseña.text.clear()
                                 }
+                                */
+                                goMain()
                             }
                         }else{
                             showAlert()
                         }
                     }
             }
+
+
         }
 
     }
