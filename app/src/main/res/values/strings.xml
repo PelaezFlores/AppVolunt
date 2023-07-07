@@ -47,6 +47,8 @@
     <string name="cantidad_voluntarios_requeridos">Cantidad de Voluntarios Requeridos</string>
     <string name="boton_publicar">Publicar</string>
     <string name="crear_proyecto_titulo">Crear Nuevo Proyecto de Voluntariado</string>
+    <string name="title_PostularVoluntario">Postular a un proyecto de voluntariado</string>
+    <string name="title_PostularProyectosVolunatario">Postular a un proyecto de voluntariado</string>
 
     <!-- Agrega aquí los estados del proyecto en el archivo de strings -->
     <string-array name="estados_proyecto">

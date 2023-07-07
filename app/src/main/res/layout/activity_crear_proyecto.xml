@@ -19,7 +19,7 @@
             android:text="@string/crear_proyecto_titulo"
             android:textSize="20sp"
             android:textColor="@color/primary_text_color"
-            android:marginBottom="16dp" />
+             />
 
         <EditText
             android:id="@+id/nombreProyecto"

@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
         val Registro: TextView = findViewById(R.id.txtRegistrar)
         val db = FirebaseFirestore.getInstance()
 
-        val email: String = "admin@esan.pe"
+        val email1: String = "admin@esan.pe"
 
         Registro.setOnClickListener{
             this.goRegistro()
@@ -40,13 +40,14 @@ class LoginActivity : AppCompatActivity() {
 
 
         btnLogin.setOnClickListener{
-
-            if(etEmail.text.isNotEmpty() && etContraseña.text.isNotEmpty()){
+        val email= etEmail.text.toString()
+            val clave = etContraseña.text.toString()
+            if(email.isNotEmpty() && clave.isNotEmpty()){
                 FirebaseAuth.getInstance()
-                    .signInWithEmailAndPassword(etEmail.text.toString(), etContraseña.text.toString()).addOnCompleteListener{
+                    .signInWithEmailAndPassword(email, clave).addOnCompleteListener{
                         if (it.isSuccessful){
-                            db.collection("users").document(etEmail.text.toString()).get().addOnSuccessListener{
-                                /*
+                            db.collection("users").document(email).get().addOnSuccessListener{
+
                                 val validacion = it.get("Tipo") as String?
                                 if (validacion == "Voluntario"){
                                     goMain()
@@ -59,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
                                     etEmail.text.clear()
                                     etContraseña.text.clear()
                                 }
-                                */
+
                                 goMain()
                             }
                         }else{
@@ -84,7 +85,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goMain(){
-        val intent: Intent = Intent(this, RegistroOrganizacionFragment::class.java)
+        val intent: Intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
 
     }
