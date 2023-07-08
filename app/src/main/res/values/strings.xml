@@ -49,6 +49,12 @@
     <string name="crear_proyecto_titulo">Crear Nuevo Proyecto de Voluntariado</string>
     <string name="title_PostularVoluntario">Postular a un proyecto de voluntariado</string>
     <string name="title_PostularProyectosVolunatario">Postular a un proyecto de voluntariado</string>
+    <string name="text_nombreVoluntario">Nombre de Voluntario</string>
+    <string name="text_edad">Edad</string>
+    <string name="text_habilidades">Habilidades</string>
+    <string name="text_disponibilidadHoraria">Disponibilidad Horaria</string>
+    <string name="text_experencia_desc">Descripcion de Experencia</string>
+    <string name="btn_Registrar">Registrar</string>
 
     <!-- Agrega aquí los estados del proyecto en el archivo de strings -->
     <string-array name="estados_proyecto">

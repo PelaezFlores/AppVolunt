@@ -62,14 +62,17 @@
         android:layout_below="@id/editTextDNI"
         android:layout_margin="16dp"/>
 
-    <EditText
-        android:id="@+id/editTextNombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        android:layout_below="@id/textViewNombre"
-        android:layout_margin="16dp"/>
+            <EditText
+                android:id="@+id/editTextNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewNombre"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:hint="Nombre"
+                android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textViewTipo"
@@ -79,12 +82,15 @@
         android:layout_below="@id/editTextNombre"
         android:layout_margin="16dp"/>
 
-    <Spinner
-        android:id="@+id/spinnerTipo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewTipo"
-        android:layout_margin="16dp"/>
+            <Spinner
+                android:id="@+id/spinnerTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTipo"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp" />
 
     <TextView
         android:id="@+id/textViewCelular"
@@ -94,14 +100,17 @@
         android:layout_below="@id/spinnerTipo"
         android:layout_margin="16dp"/>
 
-    <EditText
-        android:id="@+id/editTextCelular"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Celular"
-        android:inputType="phone"
-        android:layout_below="@id/textViewCelular"
-        android:layout_margin="16dp"/>
+            <EditText
+                android:id="@+id/editTextCelular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCelular"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:hint="Celular"
+                android:inputType="phone" />
 
     <TextView
         android:id="@+id/textViewDireccion"

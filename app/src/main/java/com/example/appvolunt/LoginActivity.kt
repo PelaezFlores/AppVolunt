@@ -85,7 +85,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goMain(){
-        val intent: Intent = Intent(this, MainActivity::class.java)
+        val intent: Intent = Intent(this, PerfilFragment::class.java)
         startActivity(intent)
 
     }
